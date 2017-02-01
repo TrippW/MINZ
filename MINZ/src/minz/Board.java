@@ -82,7 +82,7 @@ public class Board {
         return board[row][col];
     }
 
-    public boolean check_for_win(boolean print) {
+    public boolean check_for_win() {
         boolean k = (check_rows_for_win() || check_cols_for_win() || check_diagonal_for_win());
         return k;
     }
