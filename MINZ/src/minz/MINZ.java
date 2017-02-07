@@ -5,7 +5,7 @@ import static minz.Algorithm.alphabeta;
 public class MINZ {
 
     public static void main(String[] args) {
-        MINZ game = new MINZ(3, 5);
+        MINZ game = new MINZ(3, 4);
         game.print();
         int i = 0;
         while (!game.board.check_for_win() && !game.cur_node.get_children().isEmpty()) {
@@ -15,7 +15,7 @@ public class MINZ {
     }
 
     public void play(int i) {
-        cur_node = alphabeta(cur_node, 2 + (3 * i));
+        cur_node = alphabeta(cur_node, 4);// + (2 * i));
         board.play(cur_node.move);
         cur_node.fill_children(1);
         print();
